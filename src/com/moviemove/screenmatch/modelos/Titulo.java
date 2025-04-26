@@ -1,6 +1,6 @@
 package com.moviemove.screenmatch.modelos;
 
-public class Titulo {
+public class Titulo  implements  Comparable <Titulo>{
     //Clase padre que contiene atributos que comparten elementos
     // como series o péliculas
     private String nombre;
@@ -47,6 +47,12 @@ public class Titulo {
         return totalDeLasEvaluaciones;
     }
 
+
+    public Titulo(String nombre, int fechaDeLanzamiento) {
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+        this.nombre = nombre;
+    }
+
     public void mostrarFichaTecnica() {
         System.out.println("\nEl nombre de la pélicula es: " + nombre);
         System.out.println("La fecha  de lazamiento de la pélicula es: " + fechaDeLanzamiento);
@@ -68,5 +74,12 @@ public class Titulo {
 
         return sumaDeLasEvaluaciones / totalDeLasEvaluaciones;
     }
+
+    // método para orgnizar por titulo
+    @Override
+    public int compareTo(Titulo otroTitulo) {
+        return this.getNombre().compareTo(otroTitulo.getNombre());
+    }
+
 
 }
