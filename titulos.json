@@ -1,0 +1,42 @@
+[
+  {
+    "Nombre": "Matrix",
+    "FechaDeLanzamiento": 1993,
+    "DuracionEnMinutos": 60,
+    "IcluidoEnElPlan": false,
+    "SumaDeLasEvaluaciones": 0.0,
+    "TotalDeLasEvaluaciones": 0
+  },
+  {
+    "Nombre": "Avatar",
+    "FechaDeLanzamiento": 2009,
+    "DuracionEnMinutos": 162,
+    "IcluidoEnElPlan": false,
+    "SumaDeLasEvaluaciones": 0.0,
+    "TotalDeLasEvaluaciones": 0
+  },
+  {
+    "Nombre": "Rocky",
+    "FechaDeLanzamiento": 1976,
+    "DuracionEnMinutos": 120,
+    "IcluidoEnElPlan": false,
+    "SumaDeLasEvaluaciones": 0.0,
+    "TotalDeLasEvaluaciones": 0
+  },
+  {
+    "Nombre": "Top Gun",
+    "FechaDeLanzamiento": 1986,
+    "DuracionEnMinutos": 109,
+    "IcluidoEnElPlan": false,
+    "SumaDeLasEvaluaciones": 0.0,
+    "TotalDeLasEvaluaciones": 0
+  },
+  {
+    "Nombre": "Alien",
+    "FechaDeLanzamiento": 1979,
+    "DuracionEnMinutos": 117,
+    "IcluidoEnElPlan": false,
+    "SumaDeLasEvaluaciones": 0.0,
+    "TotalDeLasEvaluaciones": 0
+  }
+]
