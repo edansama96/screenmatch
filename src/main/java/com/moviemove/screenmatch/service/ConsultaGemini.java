@@ -28,7 +28,7 @@ public class ConsultaGemini {
         * gestionar posibles errores mediante excepciones en Java:
         * */
 
-        Client cliente = new Client.Builder().apiKey("AIzaSyC68bmiuCf4qbgmD0YpCj0aRyFpRCRJY8k").build();
+        Client cliente = new Client.Builder().apiKey("").build();
 
         try {
             GenerateContentResponse respuesta = cliente.models.generateContent(
