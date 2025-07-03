@@ -1,10 +1,12 @@
 package com.moviemove.screenmatch.repository;
 
+import com.moviemove.screenmatch.dto.EpisodioDTO;
 import com.moviemove.screenmatch.model.Categoria;
 import com.moviemove.screenmatch.model.Episodio;
 import com.moviemove.screenmatch.model.Serie;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 import java.util.Optional;
@@ -34,5 +36,17 @@ public interface SerieRepository extends JpaRepository <Serie,Long> {
     //Función o método para realizar un top de episodios por serie
     @Query("SELECT e FROM Serie s JOIN s.episodios e WHERE s = :serie ORDER BY e.evaluacion DESC LIMIT 5 ")
     List<Episodio> top5Episodios(Serie serie);
+    //Método para indicar los episodios de lanzamientos o posibles series de lanzamienrto
+    //Uso de JPQL
+    @Query("SELECT s FROM Serie s " + "JOIN s.episodios e " + "GROUP BY s " + "ORDER BY MAX(e.fechaDeLanzamiento) DESC LIMIT 5")
+    List<Serie> lanzamientosMasRecientes ();
+
+    //Método con JPA para obtener por medio del número de temporadas los episodios
+    @Query("SELECT e FROM Serie s JOIN s.episodios e WHERE s.id = :id AND e.numeroTemporada = :numeroTemporada")
+    //tener presnete el uso al declarar @Param("numeroTemporada") en el parámetro de método  cuando no conincidas los parametros
+    // para que así JPA los interprete y pueda funcionar en caso de que sea necesario
+    List<Episodio> obtenerTemporadasPorNumero( Long id, @Param("numeroTemporada") Long numeroTemporada);
+
+
 
 }
